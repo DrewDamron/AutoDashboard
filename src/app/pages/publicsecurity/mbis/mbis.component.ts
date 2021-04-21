@@ -72,7 +72,7 @@ export class MbisComponent implements OnInit {
 
     let t2: Test = new Test();
     t2.collapseSteps = true;
-    t2.description = "Verify Latent 1000 DPI";
+    t2.description = "Update Preferences";
     t2.lastResult = "Passed"; 
     t2.steps = [];
     let t2s1: TestStep = new TestStep();

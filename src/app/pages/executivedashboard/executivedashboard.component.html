@@ -1,18 +1,54 @@
 <div class=" content">
   <div class=" row">
-    <div class=" col-12">
-        <div class=" card card-chart">
-            <div class=" card-header">
-              <div class=" row">
-                <div class=" col-sm-6 text-left">
-                  <h2 class=" card-title">Project Delivery</h2>
-                </div>
-              </div>
-            </div>
-            <div class=" card-body">
-                <canvas id="projectOverviewChart"> </canvas>
-            </div>
+    <div class=" col-lg-12">
+      <div class=" card card-chart card-chart-pie">
+        <div class=" card-header">
+          <h2 class=" card-title">Project Status % Complete</h2>
+          <h5 class=" card-category">Current project delivery state</h5>
         </div>
+        <div class=" card-body">
+          <div class="chart-area"><canvas id="projDeliveryStateChart"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-12">
+      <div class=" card card-chart card-chart-pie">
+        <div class=" card-header">
+          <h2 class=" card-title">Issues Closed</h2>
+          <h5 class=" card-category">Jira issues closed by day trend analysis</h5>
+        </div>
+        <div class=" card-body">
+          <div class="chart-area"><canvas id="closedByDayTrendChart"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-12">
+      <div class=" card card-chart card-chart-pie">
+        <div class=" card-header">
+          <h2 class=" card-title">Project Deliverables</h2>
+          <h5 class=" card-category">A breakdown of project deliverables that are closed, past due or yet to be started</h5>
+        </div>
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-4">
+              <div class="chart-area"><canvas id="azDataChart"> </canvas></div>
+              <div class="text-center text-white" style="font-size: 1.2em;">MBIS AZ</div>
+            </div>
+            <div class=" col-4">
+              <div class="chart-area"><canvas id="flDataChart"> </canvas></div>
+              <div class="text-center text-white" style="font-size: 1.2em;">MBIS FL</div>
+            </div>
+            <div class=" col-4">
+              <div class="chart-area"><canvas id="nypdDataChart"> </canvas></div>
+              <div class="text-center text-white" style="font-size: 1.2em;">MBIS NYPD</div>
+            </div>
+            <div class=" col-4">
+              <div class="chart-area"><canvas id="nmDataChart"> </canvas></div>
+              <div class="text-center text-white" style="font-size: 1.2em;">MBIS NM</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

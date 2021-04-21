@@ -109,7 +109,7 @@ export class ChartOptionsUtils {
         return gradientChartOptionsConfigurationWithTooltipPurple;
     }
 
-    public getGradientChartOptionsConfigurationWithTooltipRed() {
+    public getGradientChartOptionsConfigurationWithTooltipRed(suggestedMax = 125, suggestedMin = 60) {
         var gradientChartOptionsConfigurationWithTooltipRed: any = {
             maintainAspectRatio: false,
             legend: {
@@ -137,8 +137,8 @@ export class ChartOptionsUtils {
                     zeroLineColor: "transparent"
                   },
                   ticks: {
-                    suggestedMin: 60,
-                    suggestedMax: 125,
+                    suggestedMin: suggestedMin,
+                    suggestedMax: suggestedMax,
                     padding: 20,
                     fontColor: "#9a9a9a"
                   }

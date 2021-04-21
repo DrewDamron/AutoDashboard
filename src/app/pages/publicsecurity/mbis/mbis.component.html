@@ -50,20 +50,32 @@
                 <div class=" table-full-width table-responsive">
                     <table class="table">
                     <tbody>
-                        <tr *ngFor="let test of mbisTests">
-                            <td>
-                                <p class="title" style="min-width: 100px;">Feature:</p>
-                                <p class="">{{test.description}}</p>
-                                <p class="title pad-left10"><i (click)="showCollapseSteps(test)" style="cursor: pointer;" class="et-icons icon-minimal-up pad-right10"> </i>Steps:</p>
-                                <div [hidden]="test.collapseSteps" *ngFor="let step of test.steps">
-                                    <p>{{step.name}}</p>
+                      <tr *ngFor="let test of mbisTests">
+                          <td>
+                            <div class="card">
+                              <div class=" card-header">
+                                <div class=" row">
+                                  <div class=" col-sm-1 text-left">
+                                    <i (click)="showCollapseSteps(test)" style="cursor: pointer;" class="et-icons icon-minimal-up pad-right10"> </i>
+                                  </div>
+                                  <div class=" col-sm-7 text-left">
+                                    <h4 class=" card-title">Feature:</h4>
+                                    <h4 class=" card-title">{{test.description}}</h4>
+                                  </div>
+                                  <div class=" col-sm-4 text-right">
+                                    <p class="title" style="min-width: 100px;">Last Execution Result: </p>
+                                    <p class="title text-success">PASS</p>      
+                                  </div>
                                 </div>
-                            </td>
-                            <td>
-                                <p class="title" style="min-width: 100px;">Last Execution Result:</p>
-                                <p class="text-success">Pass</p>
-                            </td>
-                        </tr>
+                              </div>
+                              <div [hidden]="test.collapseSteps" class="card-body">
+                                <div *ngFor="let step of test.steps">
+                                  <p [ngClass]="{'text-danger' : test.Passed == false}">{{step.Name}}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                      </tr>
                     </tbody>
                     </table>
                 </div>
