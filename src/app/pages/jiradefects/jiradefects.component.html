@@ -1,0 +1,142 @@
+<div class=" content">
+    <div class=" row">
+      <div class="col-sm-12">
+        <div class=" pad-down10 btn-group btn-group-toggle float-right" data-toggle="buttons">
+          <label class=" btn btn-sm btn-danger btn-simple" (click)="updateOptions('allClicked');" [ngClass]="{ active: allClicked === true }">
+            <input checked="checked" name="options" type="radio" />
+            <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">All</span>
+            <span class=" d-block d-sm-none">
+              <i class=" et-icons icon-single-02"> </i>
+            </span>
+          </label>
+          <label class=" btn btn-sm btn-danger btn-simple" (click)="updateOptions('psClicked');" [ngClass]="{ active: psClicked === true }">
+            <input checked="checked" name="options" type="radio" />
+            <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">Public Security</span>
+            <span class=" d-block d-sm-none">
+              <i class=" et-icons icon-single-02"> </i>
+            </span>
+          </label>
+          <label class=" btn btn-sm btn-danger btn-simple" (click)="updateOptions('ciClicked');"[ngClass]="{ active: ciClicked === true }">
+            <input checked="checked" name="options" type="radio" />
+            <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">Civil Identity</span>
+            <span class=" d-block d-sm-none">
+              <i class=" et-icons icon-single-02"> </i>
+            </span>
+          </label>
+          <label class=" btn btn-sm btn-danger btn-simple" (click)="updateOptions('dgClicked');" [ngClass]="{ active: dgClicked === true }">
+            <input class=" d-none d-sm-none" name="options" type="radio"/>
+            <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">Digital</span>
+            <span class=" d-block d-sm-none">
+              <i class=" et-icons icon-gift-2"> </i>
+            </span>
+          </label>
+          <label class=" btn btn-sm btn-warning btn-simple">
+            <div class="info-icon text-center icon-warning" (click)="downloadFile();" style="width: 40px;">
+              <i class=" et-icons icon-cloud-download-93"> </i>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class=" col-lg-6">
+        <div class=" card card-chart">
+          <div class=" card-header">
+            <h4 class="">Jira Defects</h4>
+            <h3 class=" card-title">
+              <i class=" et-icons icon-single-copy-04 text-info"> </i> 42
+            </h3>
+          </div>
+          <div class=" card-body">
+            <div class="chart-area"><canvas id="SystemDefectsChart"> </canvas></div>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-6">
+        <div class=" card card-chart">
+          <div class=" card-header">
+            <h4 class="">Escaped Defects by Year</h4>
+            <h3 class=" card-title">
+              <i class=" et-icons icon-single-copy-04 text-info"> </i>
+            </h3>
+          </div>
+          <div class=" card-body">
+            <div class="chart-area"><canvas id="SystemEscapedDefectsChart"> </canvas></div>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-6">
+        <div class=" card card-chart card-chart-pie">
+          <div class="card-header"> 
+            <h2 class="card-title">Project Defects</h2>
+          </div>
+          <div class="card-body">
+            <div class=" row">
+              <div class=" col-10">
+                <div class="chart-area"><canvas id="projectDefectsPieChart"> </canvas></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" col-lg-6">
+        <div class=" card card-chart card-chart-pie">
+          <div class="card-header"> 
+            <h2 class="card-title">Late Detection Cause:</h2>
+          </div>
+          <div class="card-body">
+            <div class=" row">
+              <div class=" col-10">
+                <div class="chart-area"><canvas id="systemDefectsPieChart"> </canvas></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class=" col-lg-12">
+        <div class=" card card-tasks">
+          <div class=" card-header">
+            <h4 class="text-danger title d-inline">Jira Defects(6)</h4>
+          </div>
+          <div class=" card-body">
+            <div class=" table-full-width table-responsive">
+              <table class=" table">
+                <tbody>
+                  <tr *ngFor="let defect of jiraDefects">
+                    <td>
+                      <p class="title" style="min-width: 100px;">Jira Key:</p>
+                      <p class="text-info">{{defect.key}}</p>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 100px;">Summary:</p>
+                      <p class="">{{defect.fields.summary}}</p>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 100px;">Project:</p>
+                      <p class=""><b>{{defect.fields.project.name}}</b></p>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 100px;">Escaped From:</p>
+                      <p class="">{{defect.fields.customfield_11701.value}}</p>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 100px;">Late Detection Cause:</p>
+                      <p class="">{{defect.fields.customfield_11704.value}}</p>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 100px;">Created:</p>
+                      <p class="">{{defect.fields.created}}</p>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 100px;">Created By:</p>
+                      <p>{{defect.fields.creator.displayname}}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

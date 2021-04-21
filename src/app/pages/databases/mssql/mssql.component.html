@@ -1,0 +1,41 @@
+<div class=" content">
+    <div class=" row">
+      <div class=" col-lg-12">
+        <div class=" card">
+          <div class=" card-header">
+            <h4 class="text-danger title d-inline">Tests</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-full-width table-responsive">
+              <table class=" table">
+                <tbody>
+                  <tr *ngFor="let test of tests">
+                    <td>
+                      <p style="min-width: 100px;"><b>Test Name:</b></p>
+                      <p [ngClass]="{'text-danger' : test.Passed == false}">{{test.Description}}</p>
+                      <p class="title">Steps:</p>
+                      <div *ngFor="let step of test.Steps">
+                        <p [ngClass]="{'text-danger' : test.Passed == false}">{{step.Name}}</p>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 100px;">Result:</p>
+                      <p><b>{{test.Result}}</b></p>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 100px;">Total Execution Time:</p>
+                      <p><b>{{test.ExecutionTime}}</b></p>
+                    </td>
+                    <td>
+                      <p class="title" style="min-width: 150px;">Last Executed</p>
+                      <p>{{test.LastExecutionDate}}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

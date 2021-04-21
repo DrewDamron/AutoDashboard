@@ -1,0 +1,229 @@
+<div class=" content">
+  <div class=" row">
+    <div class=" col-12">
+      <div class="col-sm-12">
+        <div class=" pad-down10 btn-group btn-group-toggle float-right" data-toggle="buttons">
+          <label class=" btn btn-sm btn-danger btn-simple" (click)="data = allTestExecutions; updateOptions('allClicked');" [ngClass]="{ active: dashBoardDataObjects.allClicked === true }">
+            <input checked="checked" name="options" type="radio" />
+            <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">All</span>
+            <span class=" d-block d-sm-none">
+              <i class=" et-icons icon-single-02"> </i>
+            </span>
+          </label>
+          <label class=" btn btn-sm btn-danger btn-simple" (click)="data = publicSecurityExecutions; updateOptions('psClicked');" [ngClass]="{ active: dashBoardDataObjects.psClicked === true }">
+            <input checked="checked" name="options" type="radio" />
+            <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">Public Security</span>
+            <span class=" d-block d-sm-none">
+              <i class=" et-icons icon-single-02"> </i>
+            </span>
+          </label>
+          <label class=" btn btn-sm btn-danger btn-simple" (click)="data = dbExecutions; updateOptions('ciClicked');"[ngClass]="{ active: dashBoardDataObjects.ciClicked === true }">
+            <input checked="checked" name="options" type="radio" />
+            <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">Civil Identity</span>
+            <span class=" d-block d-sm-none">
+              <i class=" et-icons icon-single-02"> </i>
+            </span>
+          </label>
+          <label class=" btn btn-sm btn-danger btn-simple" (click)="data = osExecutions; updateOptions('dgClicked');" [ngClass]="{ active: dashBoardDataObjects.dgClicked === true }">
+            <input class=" d-none d-sm-none" name="options" type="radio"/>
+            <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">Digital</span>
+            <span class=" d-block d-sm-none">
+              <i class=" et-icons icon-gift-2"> </i>
+            </span>
+          </label>
+          <label class=" btn btn-sm btn-warning btn-simple">
+            <div class="info-icon text-center icon-warning" (click)="downloadFile();" style="width: 40px;">
+              <i class=" et-icons icon-cloud-download-93"> </i>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class=" col-sm-6 text-left">
+              <h5 class=" card-category">Test Executions</h5>
+              <h2 class=" card-title">{{dashBoardDataObjects.executionChartText}}</h2>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+          <div class="chart-area"><canvas id="totalExecutionsChart"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-6">
+      <div class=" card card-chart card-chart-pie">
+        <div class=" card-header">
+          <h5 class=" card-category">Test Executions</h5>
+          <h2 class=" card-title">Pass/Fail %</h2>
+        </div>
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-6">
+              <div class="chart-area"><canvas id="passfailperc"> </canvas></div>
+            </div>
+            <div class=" col-6">
+              <h4 class=" card-title">
+                <i class=" tim-icons icon-trophy text-success"> </i> Executions: {{dashBoardDataObjects.totalExecutions}}
+              </h4>
+              <p class=" category">A pass rate of {{dashBoardDataObjects.passFailPercent}}%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-6">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Tests</h5>
+          <h3 class=" card-title">{{dashBoardDataObjects.orgTestsText}}</h3>
+        </div>
+        <div class=" card-body">
+          <div class="chart-area"><canvas id="SystemTestsChart"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-3 col-md-6">
+      <div class=" card card-stats">
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-5">
+              <div class=" info-icon text-center icon-warning">
+                <i class=" et-icons icon-spaceship"> </i>
+              </div>
+            </div>
+            <div class=" col-7">
+              <div class=" numbers">
+                <h4 class="">Total Executions</h4>
+                <h3 class=" card-title">{{dashBoardDataObjects.executionCount}}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" card-footer">
+          <hr />
+          <div class=" stats">
+            <i class=" et-icons icon-sound-wave"> </i> Last Update: 03/15/2021
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-3 col-md-6">
+      <div class=" card card-stats">
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-5">
+              <div class=" info-icon text-center icon-primary">
+                <i class=" et-icons icon-paper"> </i>
+              </div>
+            </div>
+            <div class=" col-7">
+              <div class=" numbers">
+                <h4 class="">Tests</h4>
+                <h3 class=" card-title">660</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" card-footer">
+          <hr />
+          <div class=" stats">
+            <i class=" et-icons icon-sound-wave"> </i> Last Update: 03/15/2021
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-3 col-md-6">
+      <div class=" card card-stats">
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-5">
+              <div class=" info-icon text-center icon-success">
+                <i class=" et-icons icon-check-2"> </i>
+              </div>
+            </div>
+            <div class=" col-7">
+              <div class=" numbers">
+                <h4 class="">Passed Tests</h4>
+                <h3 class=" card-title">656</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" card-footer">
+          <hr />
+          <div class=" stats">
+            <i class=" et-icons icon-sound-wave"> </i> Last Run: 03/15/2021
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-3 col-md-6">
+      <div class=" card card-stats">
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-5">
+              <div class=" info-icon text-center icon-danger">
+                <i class=" et-icons icon-simple-remove"> </i>
+              </div>
+            </div>
+            <div class=" col-7">
+              <div class=" numbers">
+                <h4 class="">Tests Failed</h4>
+                <h3 class=" card-title">4</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" card-footer">
+          <hr />
+
+          <div class=" stats">
+            <i class=" et-icons icon-sound-wave"> </i> Last Updated: 03/15/2021
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-12">
+      <div class=" card card-tasks">
+        <div class=" card-header">
+          <h4 class="text-danger title d-inline">Active Failed Tests({{dashBoardDataObjects.failedTestCount}})</h4>
+        </div>
+        <div class=" card-body">
+          <div class=" table-full-width table-responsive">
+            <table class=" table">
+              <tbody>
+                <tr *ngFor="let failedTest of dashBoardDataObjects.activeFailedTests">
+                  <td>
+                    <p class="text-danger">{{failedTest.Description}}</p>
+                  </td>
+                  <td>
+                    <p class="title" style="min-width: 100px;">Failing For:</p>
+                    <p class="text-danger"><b>{{failedTest.FailingFor}}</b></p>
+                  </td>
+                  <td>
+                    <p class="title" style="min-width: 100px;">System:</p>
+                    <p><b>{{failedTest.System}}</b></p>
+                  </td>
+                  <td>
+                    <p class="title" style="min-width: 100px;">Jira Link:</p>
+                    <p><b><a>{{failedTest.JiraID}}</a></b></p>
+                  </td>
+                  <td>
+                    <p class="title" style="min-width: 150px;">First Failure Date:</p>
+                    <p>{{failedTest.FirstFailureDate}}</p>
+                  </td>
+                  <td>
+                    <p class="title" style="min-width: 150px;">Last Failure Date:</p>
+                    <p>{{failedTest.LastFailureDate}}</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

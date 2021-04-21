@@ -1,0 +1,74 @@
+<div class=" content">
+    <div class="row">
+        <div class=" col-lg-6">
+            <div class=" card card-chart card-chart-pie">
+              <div class=" card-header">
+                <h5 class=" card-category">Test Executions</h5>
+                <h2 class=" card-title">Pass/Fail %</h2>
+              </div>
+              <div class=" card-body">
+                <div class=" row">
+                  <div class=" col-6">
+                    <div class="chart-area"><canvas id="passfailperc"> </canvas></div>
+                  </div>
+                  <div class=" col-6">
+                    <h4 class=" card-title">
+                      <i class=" tim-icons icon-trophy text-success"> </i> Executions: 124
+                    </h4>
+                    <p class=" category">A pass rate of 96%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class=" col-lg-6">
+            <div class=" card card-chart card-chart-pie">
+              <div class=" card-header">
+                <h5 class=" card-category">Test Type</h5>
+                <h2 class=" card-title">Manual/Automated %</h2>
+              </div>
+              <div class=" card-body">
+                <div class=" row">
+                  <div class=" col-6">
+                    <div class="chart-area"><canvas id="automationperc"> </canvas></div>
+                  </div>
+                  <div class=" col-6">
+                    <p class=" category">An automation rate of 62%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-lg-12">
+            <div class=" card card-tasks">
+                <div class=" card-header">
+                    <h3 class="title d-inline">MBIS Tests(25)</h3>
+                </div>
+                <div class=" card-body">
+                <div class=" table-full-width table-responsive">
+                    <table class="table">
+                    <tbody>
+                        <tr *ngFor="let test of mbisTests">
+                            <td>
+                                <p class="title" style="min-width: 100px;">Feature:</p>
+                                <p class="">{{test.description}}</p>
+                                <p class="title pad-left10"><i (click)="showCollapseSteps(test)" style="cursor: pointer;" class="et-icons icon-minimal-up pad-right10"> </i>Steps:</p>
+                                <div [hidden]="test.collapseSteps" *ngFor="let step of test.steps">
+                                    <p>{{step.name}}</p>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="title" style="min-width: 100px;">Last Execution Result:</p>
+                                <p class="text-success">Pass</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
