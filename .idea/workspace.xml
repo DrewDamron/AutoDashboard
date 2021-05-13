@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c20ab508-cfdc-4f42-99dd-ab84dff43a38" name="Default Changelist" comment="" />
+    <list default="true" id="c20ab508-cfdc-4f42-99dd-ab84dff43a38" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/default~pages-components-components-module~pages-dashboard-dashboard-module~pages-jiradefects-jirade~2fcae230.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/default~pages-components-components-module~pages-dashboard-dashboard-module~pages-jiradefects-jirade~2fcae230.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/default~pages-dashboard-dashboard-module~pages-jiradefects-jiradefects-module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/default~pages-dashboard-dashboard-module~pages-jiradefects-jiradefects-module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-dashboard-dashboard-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/pages-dashboard-dashboard-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-dashboard-dashboard-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/pages-dashboard-dashboard-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/executivedashboard/executivedashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/executivedashboard/executivedashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/executivedashboard/executivedashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/executivedashboard/executivedashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/publicsecurity/mbis/mbis.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/publicsecurity/mbis/mbis.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/publicsecurity/mbis/mbis.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/publicsecurity/mbis/mbis.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/publicsecurity/tpelivescan/tpelivescan.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/publicsecurity/tpelivescan/tpelivescan.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/publicsecurity/tpelivescan/tpelivescan.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/publicsecurity/tpelivescan/tpelivescan.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/publicsecurity/tpelivescan/tpelivescan.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1rSDvVNR5fuFIwDsg9r86rBE8Ac" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,6 +53,8 @@
       <option name="presentableId" value="Default" />
       <updated>1618960828177</updated>
       <workItem from="1618960829475" duration="3000" />
+      <workItem from="1619023916423" duration="1000" />
+      <workItem from="1619713038763" duration="10000" />
     </task>
     <servers />
   </component>

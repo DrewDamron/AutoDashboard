@@ -40,6 +40,38 @@ const routes: Routes = [
         path: "",
         loadChildren: "./pages/publicsecurity/mbis/mbis.module#MbisModule"
       },
+      {
+        path: "",
+        loadChildren: "./pages/publicsecurity/tpelivescan/tpelivescan.module#TpelivescanModule"
+      },
+      {
+        path: "",
+        loadChildren: "./pages/publicsecurity/mface/mface.module#MfaceModule"
+      },
+      {
+        path: "",
+        loadChildren: "./pages/publicsecurity/ues/ues.module#UesModule"
+      },
+      {
+        path: "",
+        loadChildren: "./pages/civilidentity/webenrollment/webenrollment.module#WebenrollmentModule"
+      },
+      {
+        path: "",
+        loadChildren: "./pages/civilidentity/testing/testing.module#TestingModule"
+      },
+      {
+        path: "",
+        loadChildren: "./pages/civilidentity/backoffice/backoffice.module#BackofficeModule"
+      },
+      {
+        path: "",
+        loadChildren: "./pages/digital/proofing/proofing.module#ProofingModule"
+      },
+      {
+        path: "",
+        loadChildren: "./pages/digital/mid/mid.module#MidModule"
+      },
     ]
   },
   {

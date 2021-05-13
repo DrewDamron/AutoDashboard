@@ -1,0 +1,93 @@
+<div class=" content">
+    <div class="row">
+        <div class=" col-lg-6">
+            <div class=" card card-chart card-chart-pie">
+              <div class=" card-header">
+                <h5 class=" card-category">Test Executions</h5>
+                <h2 class=" card-title">Pass/Fail %</h2>
+              </div>
+              <div class=" card-body">
+                <div class=" row">
+                  <div class=" col-6">
+                    <div class="chart-area"><canvas id="proofingPassfailperc"> </canvas></div>
+                  </div>
+                  <div class=" col-6">
+                    <h4 class=" card-title">
+                      <i class=" tim-icons icon-trophy text-success"> </i> Executions: 124
+                    </h4>
+                    <p class=" category">A pass rate of 96%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class=" col-lg-6">
+            <div class=" card card-chart card-chart-pie">
+              <div class=" card-header">
+                <h5 class=" card-category">Test Type</h5>
+                <h2 class=" card-title">Manual/Automated %</h2>
+              </div>
+              <div class=" card-body">
+                <div class=" row">
+                  <div class=" col-6">
+                    <div class="chart-area"><canvas id="proofingAutomationperc"> </canvas></div>
+                  </div>
+                  <div class=" col-6">
+                    <p class=" category">An automation rate of 62%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-lg-12">
+            <div class=" card card-tasks">
+                <div class=" card-header">
+                    <h3 class="title d-inline">Proofing Tests(3)</h3>
+                </div>
+                <div class=" card-body">
+                <div class=" table-full-width table-responsive">
+                    <table class="table">
+                    <tbody>
+                      <tr *ngFor="let test of mbisTests">
+                          <td>
+                            <div class="card">
+                              <div class=" card-header">
+                                <div class=" row">
+                                  <div class=" col-sm-8 text-left">
+                                    <h4 class=" card-title">
+                                      <i (click)="showCollapseSteps(test)" style="cursor: pointer;" class="et-icons pad-right10" [ngClass]="{'icon-minimal-up ' : test.collapseSteps, 'icon-minimal-down ' : !test.collapseSteps}"> </i>
+                                      Feature: {{test.description}}
+                                    </h4>
+                                    <h4 class=" card-title"></h4>
+                                  </div>
+                                  <div class=" col-sm-2 text-right">
+                                    <p class="title" style="min-width: 100px;">Last Execution Date: </p>
+                                    <p class="title">{{test.lastExecution}}</p>      
+                                  </div>
+                                  <div class=" col-sm-2 text-right">
+                                    <p class="title" style="min-width: 100px;">Last Execution Result: </p>
+                                    <p class="title" [ngClass]="{'text-danger' : test.lastResult == 'Failed', 'text-success' : test.lastResult == 'Passed'}">{{test.lastResult}}</p>      
+                                  </div>
+                                </div>
+                              </div>
+                              <div [hidden]="test.collapseSteps" class="card-body">
+                                <div *ngFor="let step of test.steps">
+                                  <p [ngClass]="{'text-danger' : step.lastResult == 'Failed', 'text-success' : step.lastResult == 'Passed'}">{{step.name}}
+                                    <i *ngIf="step.screenshotURL != null" (click)="step.collapseImage = !step.collapseImage" style="cursor: pointer;" class="et-icons pad-right10" [ngClass]="{'icon-minimal-up' : step.collapseImage, 'icon-minimal-down' : !step.collapseImage}"> </i>
+                                  </p>
+                                  <img [hidden]="step.collapseImage" *ngIf="step.screenshotURL != null" [src]="step.screenshotURL">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                      </tr>
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

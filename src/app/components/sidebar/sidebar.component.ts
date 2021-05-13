@@ -71,7 +71,7 @@ export const ROUTES: RouteInfo[] = [
     ]
   },
   {
-    path: "/civilid",
+    path: "",
     title: "Civil Identity",
     type: "sub",
     icontype: "et-icons icon-badge",
@@ -79,24 +79,24 @@ export const ROUTES: RouteInfo[] = [
     isCollapsed: true,
     children: [
       {
-        path: "/webenrollment",
+        path: "webenrollment",
         title: "Web Enrollment",
         type: "link"
       },
       {
-        path: "/backoffice",
+        path: "backoffice",
         title: "Back Office",
         type: "link"
       },
       {
-        path: "/testing",
+        path: "testing",
         title: "Testing",
         type: "link"
       }
     ]
   },
   {
-    path: "/digital",
+    path: "",
     title: "Digital",
     type: "sub",
     icontype: "et-icons icon-laptop",
@@ -104,12 +104,12 @@ export const ROUTES: RouteInfo[] = [
     isCollapsed: true,
     children: [
       {
-        path: "/mid",
+        path: "mid",
         title: "MID",
         type: "link"
       },
       {
-        path: "/proofing",
+        path: "proofing",
         title: "Proofing",
         type: "link"
       }

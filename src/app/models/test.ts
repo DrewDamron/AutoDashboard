@@ -13,4 +13,6 @@ export class TestStep {
     name: string;
     lastExecution: string;
     lastResult: string;
+    screenshotURL: string;
+    collapseImage: boolean;
 }

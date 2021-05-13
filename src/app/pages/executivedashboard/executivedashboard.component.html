@@ -1,27 +1,67 @@
 <div class=" content">
   <div class=" row">
-    <div class=" col-lg-12">
+    
+    <div class=" col-lg-6">
       <div class=" card card-chart card-chart-pie">
         <div class=" card-header">
           <h2 class=" card-title">Project Status % Complete</h2>
           <h5 class=" card-category">Current project delivery state</h5>
         </div>
         <div class=" card-body">
-          <div class="chart-area"><canvas id="projDeliveryStateChart"> </canvas></div>
+          <div class=" row">
+            <div class=" col-12">
+              <div class="chart-area"><canvas id="projDeliveryStateChart"> </canvas></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class=" col-lg-12">
+    </div>    
+
+    <div class=" col-lg-6">
       <div class=" card card-chart card-chart-pie">
         <div class=" card-header">
           <h2 class=" card-title">Issues Closed</h2>
-          <h5 class=" card-category">Jira issues closed by day trend analysis</h5>
+          <h5 class=" card-category">Jira Issues Closed By Day Trend Analysis</h5>
         </div>
         <div class=" card-body">
-          <div class="chart-area"><canvas id="closedByDayTrendChart"> </canvas></div>
+          <div class=" row">
+            <div class=" col-12">
+              <div class="chart-area"><canvas id="closedByDayTrendChart"> </canvas></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class=" col-lg-6">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h4 class="">Escaped Defects by Year</h4>
+          <h3 class=" card-title">
+            <i class=" et-icons icon-single-copy-04 text-info"> </i>
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class="chart-area"><canvas id="SystemEscapedDefectsChart"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-6">
+      <div class=" card card-chart card-chart-pie">
+        <div class=" card-header">
+          <h2 class=" card-title">Releases</h2>
+          <h5 class=" card-category">Releases by month</h5>
+        </div>
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-12">
+              <div class="chart-area"><canvas id="projReleaseChart"> </canvas></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class=" col-lg-12">
       <div class=" card card-chart card-chart-pie">
         <div class=" card-header">

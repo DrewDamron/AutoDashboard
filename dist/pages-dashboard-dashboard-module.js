@@ -195,12 +195,12 @@ var DashboardComponent = /** @class */ (function () {
                 _this.dashBoardDataObjects.pieChartDataSet = [_this.dashBoardDataObjects.passFailPassed, _this.dashBoardDataObjects.passFailFailed];
                 _this.dashBoardDataObjects.executionCount += Number(metric.totalExecutions);
             });
-            _this.dashBoardDataObjects.totalExecutionsCanvas = document.getElementById("totalExecutionsChart");
-            _this.dashBoardDataObjects.totalExecutionsCTX = _this.dashBoardDataObjects.totalExecutionsCanvas.getContext("2d");
-            _this.dashBoardDataObjects.totalExecutionsChartData = new chart_js__WEBPACK_IMPORTED_MODULE_2___default.a(_this.dashBoardDataObjects.totalExecutionsCTX, _this.createLineGraph(_this.chartOptionsUtil.getGradientChartOptionsConfigurationWithTooltipRed()));
-            _this.dashBoardDataObjects.passFailPercentCanvas = document.getElementById("passfailperc");
-            _this.dashBoardDataObjects.passFailPercentCTX = _this.dashBoardDataObjects.passFailPercentCanvas.getContext("2d");
-            _this.dashBoardDataObjects.passFailChartData = new chart_js__WEBPACK_IMPORTED_MODULE_2___default.a(_this.dashBoardDataObjects.passFailPercentCTX, _this.createPieChart());
+            var totalExecutionsCanvas = document.getElementById("totalExecutionsChart");
+            var totalExecutionsCTX = totalExecutionsCanvas.getContext("2d");
+            _this.dashBoardDataObjects.totalExecutionsChartData = new chart_js__WEBPACK_IMPORTED_MODULE_2___default.a(totalExecutionsCTX, _this.createLineGraph(_this.chartOptionsUtil.getGradientChartOptionsConfigurationWithTooltipRed()));
+            var passFailPercentCanvas = document.getElementById("passfailperc");
+            var passFailPercentCTX = passFailPercentCanvas.getContext("2d");
+            _this.dashBoardDataObjects.passFailChartData = new chart_js__WEBPACK_IMPORTED_MODULE_2___default.a(passFailPercentCTX, _this.chartOptionsUtil.createPieChart(["Pass", "Fail"], _this.dashBoardDataObjects.pieChartDataSet, "Executions", ["#00c09d", "#e2e2e2"], false));
         });
         this.updateActiveFailedTests();
     };
@@ -389,7 +389,9 @@ var DashboardComponent = /** @class */ (function () {
         this.dashBoardDataObjects.passFailPercent = (Math.round(PassingPercent * 10) / 10);
     };
     DashboardComponent.prototype.createLineGraph = function (chartOptions) {
-        var gradientStroke = this.dashBoardDataObjects.totalExecutionsCTX.createLinearGradient(0, 230, 0, 50);
+        var totalExecutionsCanvas = document.getElementById("totalExecutionsChart");
+        var totalExecutionsCTX = totalExecutionsCanvas.getContext("2d");
+        var gradientStroke = totalExecutionsCTX.createLinearGradient(0, 230, 0, 50);
         gradientStroke.addColorStop(1, "rgba(233,32,16,0.2)");
         gradientStroke.addColorStop(0.4, "rgba(233,32,16,0.0)");
         gradientStroke.addColorStop(0, "rgba(66,134,121,0)"); //red colors
@@ -418,70 +420,6 @@ var DashboardComponent = /** @class */ (function () {
                 ]
             },
             options: chartOptions
-        };
-        return config;
-    };
-    DashboardComponent.prototype.createPieChart = function () {
-        var config = {
-            type: "pie",
-            data: {
-                labels: ["Pass", "Fail"],
-                datasets: [
-                    {
-                        label: "Executions",
-                        pointRadius: 0,
-                        pointHoverRadius: 0,
-                        backgroundColor: ["#00c09d", "#e2e2e2"],
-                        borderWidth: 0,
-                        data: this.dashBoardDataObjects.pieChartDataSet
-                    }
-                ]
-            },
-            options: {
-                cutoutPercentage: 70,
-                legend: {
-                    display: false
-                },
-                tooltips: {
-                    backgroundColor: "#f5f5f5",
-                    titleFontColor: "#333",
-                    bodyFontColor: "#666",
-                    bodySpacing: 4,
-                    xPadding: 12,
-                    mode: "nearest",
-                    intersect: 0,
-                    position: "nearest"
-                },
-                scales: {
-                    yAxes: [
-                        {
-                            display: 0,
-                            ticks: {
-                                display: false
-                            },
-                            gridLines: {
-                                drawBorder: false,
-                                zeroLineColor: "transparent",
-                                color: "rgba(255,255,255,0.05)"
-                            }
-                        }
-                    ],
-                    xAxes: [
-                        {
-                            display: 0,
-                            barPercentage: 1.6,
-                            gridLines: {
-                                drawBorder: false,
-                                color: "rgba(255,255,255,0.1)",
-                                zeroLineColor: "transparent"
-                            },
-                            ticks: {
-                                display: false
-                            }
-                        }
-                    ]
-                }
-            }
         };
         return config;
     };

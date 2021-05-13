@@ -367,22 +367,94 @@ function __importDefault(mod) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./pages/civilidentity/backoffice/backoffice.module": [
+		"./src/app/pages/civilidentity/backoffice/backoffice.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-civilidentity-backoffice-backoffice-module"
+	],
+	"./pages/civilidentity/testing/testing.module": [
+		"./src/app/pages/civilidentity/testing/testing.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-civilidentity-testing-testing-module"
+	],
+	"./pages/civilidentity/webenrollment/webenrollment.module": [
+		"./src/app/pages/civilidentity/webenrollment/webenrollment.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-civilidentity-webenrollment-webenrollment-module"
+	],
 	"./pages/components/components.module": [
 		"./src/app/pages/components/components.module.ts",
-		"default~pages-components-components-module~pages-dashboard-dashboard-module~pages-jiradefects-jirade~2fcae230",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
 		"pages-components-components-module"
 	],
 	"./pages/dashboard/dashboard.module": [
 		"./src/app/pages/dashboard/dashboard.module.ts",
-		"default~pages-components-components-module~pages-dashboard-dashboard-module~pages-jiradefects-jirade~2fcae230",
-		"default~pages-dashboard-dashboard-module~pages-jiradefects-jiradefects-module",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"default~pages-dashboard-dashboard-module~pages-executivedashboard-executivedashboard-module~pages-ji~f3763416",
 		"pages-dashboard-dashboard-module"
+	],
+	"./pages/digital/mid/mid.module": [
+		"./src/app/pages/digital/mid/mid.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-digital-mid-mid-module"
+	],
+	"./pages/digital/proofing/proofing.module": [
+		"./src/app/pages/digital/proofing/proofing.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-digital-proofing-proofing-module"
+	],
+	"./pages/executivedashboard/executivedashboard.module": [
+		"./src/app/pages/executivedashboard/executivedashboard.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"default~pages-dashboard-dashboard-module~pages-executivedashboard-executivedashboard-module~pages-ji~f3763416",
+		"pages-executivedashboard-executivedashboard-module"
 	],
 	"./pages/jiradefects/jiradefects.module": [
 		"./src/app/pages/jiradefects/jiradefects.module.ts",
-		"default~pages-components-components-module~pages-dashboard-dashboard-module~pages-jiradefects-jirade~2fcae230",
-		"default~pages-dashboard-dashboard-module~pages-jiradefects-jiradefects-module",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"default~pages-dashboard-dashboard-module~pages-executivedashboard-executivedashboard-module~pages-ji~f3763416",
 		"pages-jiradefects-jiradefects-module"
+	],
+	"./pages/publicsecurity/mbis/mbis.module": [
+		"./src/app/pages/publicsecurity/mbis/mbis.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-publicsecurity-mbis-mbis-module"
+	],
+	"./pages/publicsecurity/mface/mface.module": [
+		"./src/app/pages/publicsecurity/mface/mface.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-publicsecurity-mface-mface-module"
+	],
+	"./pages/publicsecurity/tpelivescan/tpelivescan.module": [
+		"./src/app/pages/publicsecurity/tpelivescan/tpelivescan.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-publicsecurity-tpelivescan-tpelivescan-module"
+	],
+	"./pages/publicsecurity/ues/ues.module": [
+		"./src/app/pages/publicsecurity/ues/ues.module.ts",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~f7e38591",
+		"default~pages-civilidentity-backoffice-backoffice-module~pages-civilidentity-testing-testing-module~~719a71d6",
+		"common",
+		"pages-publicsecurity-ues-ues-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -443,6 +515,10 @@ var routes = [
         children: [
             {
                 path: "",
+                loadChildren: "./pages/executivedashboard/executivedashboard.module#ExecutivedashboardModule"
+            },
+            {
+                path: "",
                 loadChildren: "./pages/dashboard/dashboard.module#DashboardModule"
             },
             {
@@ -454,8 +530,40 @@ var routes = [
                 loadChildren: "./pages/components/components.module#ComponentsPageModule"
             },
             {
-                path: "mbis",
-                loadChildren: "./pages/publicsecurity/mbis.module#MBISModule"
+                path: "",
+                loadChildren: "./pages/publicsecurity/mbis/mbis.module#MbisModule"
+            },
+            {
+                path: "",
+                loadChildren: "./pages/publicsecurity/tpelivescan/tpelivescan.module#TpelivescanModule"
+            },
+            {
+                path: "",
+                loadChildren: "./pages/publicsecurity/mface/mface.module#MfaceModule"
+            },
+            {
+                path: "",
+                loadChildren: "./pages/publicsecurity/ues/ues.module#UesModule"
+            },
+            {
+                path: "",
+                loadChildren: "./pages/civilidentity/webenrollment/webenrollment.module#WebenrollmentModule"
+            },
+            {
+                path: "",
+                loadChildren: "./pages/civilidentity/testing/testing.module#TestingModule"
+            },
+            {
+                path: "",
+                loadChildren: "./pages/civilidentity/backoffice/backoffice.module#BackofficeModule"
+            },
+            {
+                path: "",
+                loadChildren: "./pages/digital/proofing/proofing.module#ProofingModule"
+            },
+            {
+                path: "",
+                loadChildren: "./pages/digital/mid/mid.module#MidModule"
             },
         ]
     },
@@ -1295,13 +1403,19 @@ __webpack_require__.r(__webpack_exports__);
 //Menu Items
 var ROUTES = [
     {
+        path: "/executivedashboard",
+        title: "Executive Dashboard",
+        type: "link",
+        icontype: "et-icons icon-coins",
+    },
+    {
         path: "/dashboard",
-        title: "Dashboard",
+        title: "Test Dashboard",
         type: "link",
         icontype: "et-icons icon-chart-pie-36",
     },
     {
-        path: "/publicsecurity",
+        path: "",
         title: "Public Security",
         type: "sub",
         icontype: "et-icons icon-lock-circle",
@@ -1309,29 +1423,29 @@ var ROUTES = [
         isCollapsed: true,
         children: [
             {
-                path: "/mbis",
+                path: "mbis",
                 title: "MBIS",
                 type: "link"
             },
             {
-                path: "/tpe",
+                path: "tpe",
                 title: "TPE/LiveScan",
                 type: "link"
             },
             {
-                path: "/mface",
+                path: "mface",
                 title: "MFace",
                 type: "link"
             },
             {
-                path: "/ues",
+                path: "ues",
                 title: "UES",
                 type: "link"
             }
         ]
     },
     {
-        path: "/civilid",
+        path: "",
         title: "Civil Identity",
         type: "sub",
         icontype: "et-icons icon-badge",
@@ -1339,24 +1453,24 @@ var ROUTES = [
         isCollapsed: true,
         children: [
             {
-                path: "/webenrollment",
+                path: "webenrollment",
                 title: "Web Enrollment",
                 type: "link"
             },
             {
-                path: "/backoffice",
+                path: "backoffice",
                 title: "Back Office",
                 type: "link"
             },
             {
-                path: "/testing",
+                path: "testing",
                 title: "Testing",
                 type: "link"
             }
         ]
     },
     {
-        path: "/digital",
+        path: "",
         title: "Digital",
         type: "sub",
         icontype: "et-icons icon-laptop",
@@ -1364,12 +1478,12 @@ var ROUTES = [
         isCollapsed: true,
         children: [
             {
-                path: "/mid",
+                path: "mid",
                 title: "MID",
                 type: "link"
             },
             {
-                path: "/proofing",
+                path: "proofing",
                 title: "Proofing",
                 type: "link"
             }

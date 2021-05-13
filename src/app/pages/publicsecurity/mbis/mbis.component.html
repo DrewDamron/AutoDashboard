@@ -44,7 +44,7 @@
         <div class=" col-lg-12">
             <div class=" card card-tasks">
                 <div class=" card-header">
-                    <h3 class="title d-inline">MBIS Tests(25)</h3>
+                    <h3 class="title d-inline">MBIS Tests(3)</h3>
                 </div>
                 <div class=" card-body">
                 <div class=" table-full-width table-responsive">
@@ -55,22 +55,29 @@
                             <div class="card">
                               <div class=" card-header">
                                 <div class=" row">
-                                  <div class=" col-sm-1 text-left">
-                                    <i (click)="showCollapseSteps(test)" style="cursor: pointer;" class="et-icons icon-minimal-up pad-right10"> </i>
+                                  <div class=" col-sm-8 text-left">
+                                    <h4 class=" card-title">
+                                      <i (click)="showCollapseSteps(test)" style="cursor: pointer;" class="et-icons pad-right10" [ngClass]="{'icon-minimal-up ' : test.collapseSteps, 'icon-minimal-down ' : !test.collapseSteps}"> </i>
+                                      Feature: {{test.description}}
+                                    </h4>
+                                    <h4 class=" card-title"></h4>
                                   </div>
-                                  <div class=" col-sm-7 text-left">
-                                    <h4 class=" card-title">Feature:</h4>
-                                    <h4 class=" card-title">{{test.description}}</h4>
+                                  <div class=" col-sm-2 text-right">
+                                    <p class="title" style="min-width: 100px;">Last Execution Date: </p>
+                                    <p class="title">{{test.lastExecution}}</p>      
                                   </div>
-                                  <div class=" col-sm-4 text-right">
+                                  <div class=" col-sm-2 text-right">
                                     <p class="title" style="min-width: 100px;">Last Execution Result: </p>
-                                    <p class="title text-success">PASS</p>      
+                                    <p class="title" [ngClass]="{'text-danger' : test.lastResult == 'Failed', 'text-success' : test.lastResult == 'Passed'}">{{test.lastResult}}</p>      
                                   </div>
                                 </div>
                               </div>
                               <div [hidden]="test.collapseSteps" class="card-body">
                                 <div *ngFor="let step of test.steps">
-                                  <p [ngClass]="{'text-danger' : test.Passed == false}">{{step.Name}}</p>
+                                  <p [ngClass]="{'text-danger' : step.lastResult == 'Failed', 'text-success' : step.lastResult == 'Passed'}">{{step.name}}
+                                    <i *ngIf="step.screenshotURL != null" (click)="step.collapseImage = !step.collapseImage" style="cursor: pointer;" class="et-icons pad-right10" [ngClass]="{'icon-minimal-up' : step.collapseImage, 'icon-minimal-down' : !step.collapseImage}"> </i>
+                                  </p>
+                                  <img [hidden]="step.collapseImage" *ngIf="step.screenshotURL != null" [src]="step.screenshotURL">
                                 </div>
                               </div>
                             </div>
